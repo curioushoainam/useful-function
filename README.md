@@ -65,3 +65,25 @@
 }
 /* /Go to top symbol*/
 #===============================================================
+# Function selects using pathname in alias or origin
+function href($type,$item,$seo=0)
+{
+	if($seo)
+	{
+		switch($type)
+		{
+			case 'sanpham':
+				return DOMAIN.$item->alias.'-'.$item->ma;
+		}	
+	}else
+	{
+		switch($type)
+		{
+			case 'sanpham':
+				return 'index.php?v=chitiet&ma='.$item->ma;
+		}	
+	}
+}
+#===============================================================
+
+#===============================================================

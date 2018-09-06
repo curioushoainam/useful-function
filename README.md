@@ -85,5 +85,10 @@ function href($type,$item,$seo=0)
 	}
 }
 #===============================================================
-
+#prevent refresh matter
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
 #===============================================================
